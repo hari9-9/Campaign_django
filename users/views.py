@@ -7,7 +7,7 @@ from .models import Points
 
 # Create your views here.
 
-def register(request):
+def register(request, uname=None):
     if request.method == 'POST':
         form = UserRegisterForm(request.POST)
         if form.is_valid():
@@ -15,11 +15,17 @@ def register(request):
             p = Points(username=username, points=0)
             p.save()
             form.save()
+            p = Points.objects.get(username=request.user.username)
+            p.points+=1
+            p.save()
+            
+            print(uname)
             # messages.success(request,f'Your account has been created! you are now able to log in')
             return redirect('login')
 
     else:
         form = UserRegisterForm()
+        print(uname)
     return render(request,'users/register.html',{'form': form})
 
 
