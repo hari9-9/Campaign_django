@@ -122,3 +122,5 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 LOGIN_REDIRECT_URL='profile'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'         #This tells Crispy to use Bootstrap 4 styles
+

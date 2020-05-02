@@ -1,7 +1,21 @@
 {% extends "mysite/base.html" %}
 {% load crispy_forms_tags %}
 {% block content %}
-<h1>{{ data.username }}</h1>
-<h3>{{ data.points }}</h3>
-<h3>{{ data.url }}</h3>
+<p>
+    <b>Welcome to the Honeymint contest page</b><br><br><br>
+
+<b>Contest rules:</b><br>
+	upon Registering you get one referral point added to ur account<br>
+	Share the unique link given below to friends and family upon their registration you get 1 referral point per registration<br>
+	there are no limits to score on referral points, Therefore the more you share higher the chance of winning exciting prizes from Honeymint<br> 
+<br>
+<br>
+<b>Prizes:</b><br>
+	Top 10 contestants to get 100 bottles of honey mint<br> 
+	so what are you waiting for start sharing!!!<br>
+<br>
+<br>
+</p>
+<h3>Current referral score is: {{ data.points }}</h3><br><br>
+<h3>The unique shareable link for you is:<br>{{ data.url }}</h3>
 {% endblock content %}

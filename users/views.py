@@ -12,13 +12,14 @@ def register(request, uname=None):
         form = UserRegisterForm(request.POST)
         if form.is_valid():
             username = form.cleaned_data.get('username')
-            p = Points(username=username, points=0)
+            p = Points(username=username)
             p.save()
             form.save()
-            p = Points.objects.get(username=request.user.username)
-            p.points+=1
-            p.save()
-            
+            if uname is not None:
+                p = Points.objects.get(username=uname)
+                p.points+=1
+                p.save()
+
             print(uname)
             # messages.success(request,f'Your account has been created! you are now able to log in')
             return redirect('login')
