@@ -1,0 +1,61 @@
+{% extends "mysite/base.html" %}
+{% block content %}
+    <h2>LEADERBOARD </h2>
+<h5>Highest scorer currently  {{ dat.username }}</h5><br>
+<h5>Current Highscore: {{ dat.points }}</h5><br>
+
+<h5>Your Score is  {{ dat.currpoint }}</h5><br>
+
+
+<center>
+<table class="table table-bordered" style="width:100%">
+    <thead class="thead-dark">
+    <tr>
+      <th scope="col">username</th>
+      <th scope="col">points</th>
+    </tr>
+</thead>
+    <tr>
+      <td> {{ dat.username }}</td>
+      <td>{{ dat.points }}</td>
+    </tr>
+    <tr>
+        <td> {{ dat.username1 }}</td>
+        <td>{{ dat.points1 }}</td>
+    </tr>
+    <tr>
+        <td> {{ dat.username2 }}</td>
+        <td>{{ dat.points2 }}</td>
+    </tr>
+    <tr>
+        <td> {{ dat.username3 }}</td>
+        <td>{{ dat.points3 }}</td>
+    </tr>
+    <tr>
+        <td> {{ dat.username4 }}</td>
+        <td>{{ dat.points4 }}</td>
+    </tr>
+    <tr>
+        <td> {{ dat.username5 }}</td>
+        <td>{{ dat.points5 }}</td>
+    </tr>
+    <tr>
+        <td> {{ dat.username6 }}</td>
+        <td>{{ dat.points6 }}</td>
+    </tr>
+    <tr>
+        <td> {{ dat.username7 }}</td>
+        <td>{{ dat.points7 }}</td>
+    </tr>
+    <tr>
+        <td> {{ dat.username8 }}</td>
+        <td>{{ dat.points8 }}</td>
+    </tr>
+    <tr>
+        <td> {{ dat.username9 }}</td>
+        <td>{{ dat.points9 }}</td>
+    </tr>
+  </table>
+</center>
+
+{% endblock content %}

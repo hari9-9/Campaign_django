@@ -34,12 +34,46 @@ def register(request, uname=None):
 def profile(request):
     p = Points.objects.get(username=request.user.username)
     point = p.points
-    url = "https:\\\\127.0.0.1:8000\\"+request.user.username
+    url = "http:\\\\127.0.0.1:8000\\"+request.user.username
     context ={
         'username' : request.user.username,
         'points' : point,
         'url' : url
     }
     return render(request, 'users/profile.html', {'data':context})
+
+@login_required
+def leaderboard(request):
+    p=Points.objects.order_by("-points")[0:10]
+    pe = Points.objects.get(username=request.user.username)
+
+    t={
+        'username' : p[0].username,
+        'points' : p[0].points,
+        'username1': p[1].username,
+        'points1' : p[1].points,
+        'username2': p[2].username,
+        'points2' : p[2].points,
+        'username3': p[3].username,
+        'points3' : p[3].points,
+        'username4': p[4].username,
+        'points4' : p[4].points,
+        'username5': p[5].username,
+        'points5' : p[5].points,
+        'username6': p[6].username,
+        'points6' : p[6].points,
+        'username7': p[7].username,
+        'points7' : p[7].points,
+        'username8': p[8].username,
+        'points8' : p[8].points,
+        'username9': p[9].username,
+        'points9' : p[9].points,
+        'curruser':pe.username,
+        'currpoint':pe.points,
+
+
+    }
+
+    return render(request,'users/leaderboard.html',{'dat':t})
 
 
