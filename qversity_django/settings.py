@@ -121,6 +121,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-LOGIN_REDIRECT_URL='profile'
+LOGIN_REDIRECT_URL='mysite-home'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'         #This tells Crispy to use Bootstrap 4 styles
 

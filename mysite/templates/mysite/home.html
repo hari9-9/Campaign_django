@@ -1,5 +1,43 @@
   
 {%extends "mysite/base.html"%}
 {%block content%}
-    <h1> home </h1>
+    <div class="jombotron">
+
+        <p> <h1><b>Balance Your diet, Balance your Health</b></h1><br>
+            Your nutrition is the fuel that helps keep your body moving at its best,<br>
+            giving you the ability to breathe, move, and think properly.<br>
+            A balanced diet provides the essential nutrition to help you <br>
+            get the right balance of vitamins, minerals, fiber, protein, carbs,<br> 
+            and other nutrients you need daily.<br>
+             Too much of one nutrient or too little of another and the delicate balance is thrown off.
+
+             <h2><b>Why doctors recommend Honeyminnt®</b></h2>
+             Doctors recommend Honeymint® products to their patients in order to supplement their diets and<br>
+            help make sure they’re getting the nutrients they need.
+            <p><br><br><br>
+            <b>Participate in the Honeymint® contest To win Exciting prizes</b><br><br><br>
+            
+            <b>Contest rules:</b><br>
+                upon Registering you get one referral point added to your account<br>
+                Share the unique link given below to friends and family upon their registration you get 1 referral point per registration<br>
+                there are no limits to score on referral points, Therefore the more you share higher the chance of winning exciting prizes from Honeymint<br> 
+            <br>
+            <br>
+            <b>Prizes:</b><br>
+                Top 10 contestants to get 100 bottles of honey mint<br> 
+                so what are you waiting for start sharing!!!<br><br><br>
+                <center>
+                {% if user.is_authenticated%}
+                    <a href="{% url 'profile' %}" ><b>click here to visit your profile for contest details</b></a>
+                {% else %}
+                <a href="{% url 'register' %}" ><b>Need and account? Sign up to participate in the contest</b></a>
+                <br><br>
+                <a href="{% url 'login' %}" ><b>Already have an account?Log in now!!!</b></a>
+                {% endif %}
+
+
+            </center>
+        </p>
+
+      </div>
 {% endblock content%}
