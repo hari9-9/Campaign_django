@@ -1,3 +1,16 @@
+The idea is to build a simple competition webpage that
+encourages people to spread the news about a new product. Users arrive at the page and
+sign up a form. After a successful sign up, they get one entry for the competition. At that
+point, they also have an option to share the sign up link. Every successful sign up referred
+via the link will give extra competition entries to the original link poster. There is no limit to
+the number of entries that a person can have. So the idea is: The more entries you have, the
+higher your chance to win the prize.
+
+
+
+
+
+
 Development/Target evironment:
     Windows 10
     Python 3.8.2
